@@ -1,0 +1,36 @@
+/* src/Navbar.css */
+
+.navbar {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.navbar-container {
+  max-width: 1124px; /* equivalent to max-w-7xl in Tailwind */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem; /* equivalent to space-x-4 in Tailwind */
+}
+
+.nav-link {
+  color: #4a5568; /* equivalent to text-gray-700 in Tailwind */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #3b82f6; /* equivalent to hover:text-blue-500 in Tailwind */
+}
+
+.nav-link-active {
+  color: #3b82f6; /* equivalent to text-blue-500 in Tailwind */
+  font-weight: bold;
+  border-bottom: 2px solid #3b82f6; /* equivalent to border-blue-500 */
+}
