@@ -21,6 +21,7 @@ function Plans() {
   ];
 
   const [strategy, setStrategy] = useState(strategyChoices[0].value);
+  const [inputValue, setInputValue] = useState("");
   const [objective, setObjective] = useState(objectiveChoices[0].value);
   const [target_audience_analysis, setTargetAudience] = useState(targetAudienceChoices[0].value);
 
@@ -61,8 +62,20 @@ function Plans() {
               </option>
             ))}
           </select>
-        </div>
-
+          </div>
+          <div className="mb-4">
+        <label htmlFor="description" className="block text-gray-700 mb-1">
+          Describe {strategy }
+        </label>
+        <input
+          type="text"
+          className="border-2 w-full"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          placeholder={`Enter details about ${strategy || "your strategy"}`} 
+          id="description"
+        />
+      </div>
         <div className="mb-4">
           <label className="block text-gray-700 mb-1">Objective</label>
           <select
